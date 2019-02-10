@@ -1,0 +1,211 @@
+irun(64): 15.20-s051: (c) Copyright 1995-2018 Cadence Design Systems, Inc.
+TOOL:	irun(64)	15.20-s051: Started on Feb 11, 2019 at 01:30:23 IST
+irun
+	-access +rwc
+	-f compile.f
+		alu.v
+		ex_mem_stage.v
+		mem_stage.v
+		brach_jump_unit.v
+		fetch_stage.v
+		mem_top.v
+		btb_file.v
+		forwarding_unit.v
+		hazard_unit.v
+		mem_wb_stage.v
+		btb_read.v
+		id_ex_stage.v
+		btb.v
+		if_id_stage.v
+		pc.v
+		btb_write.v
+		inst_mem.v
+		reg_file.v
+		control_unit.v
+		decode_stage.v
+		load_store.v
+		tb_top.v
+		decode_unit.v
+		lru_next.v
+		top.v
+		dynamic_branch_predictor.v
+		lru_reg.v
+		wb.v
+		execute_stage.v
+		memory.v
+DEFINE gpdk045		$ANALOG/45nm/gpdk045		
+|
+irun: *W,DLCPTH (/tools/cadence/FOUNDRY/cds.lib,15): cds.lib Permission denied '/tools/cadence/FOUNDRY/analog/45nm/gpdk045' (cds.lib command ignored).
+DEFINE rfLib_new	/home/install/FOUNDRY/rfLib_new
+|
+irun: *W,DLCPTH (/tools/cadence/FOUNDRY/cds.lib,19): cds.lib Invalid path '/home/install/FOUNDRY/rfLib_new' (cds.lib command ignored).
+DEFINE gpdk045		$ANALOG/45nm/gpdk045		
+|
+irun: *W,DLCPTH (/tools/cadence/FOUNDRY/cds.lib,15): cds.lib Permission denied '/tools/cadence/FOUNDRY/analog/45nm/gpdk045' (cds.lib command ignored).
+DEFINE rfLib_new	/home/install/FOUNDRY/rfLib_new
+|
+irun: *W,DLCPTH (/tools/cadence/FOUNDRY/cds.lib,19): cds.lib Invalid path '/home/install/FOUNDRY/rfLib_new' (cds.lib command ignored).
+DEFINE gpdk045		$ANALOG/45nm/gpdk045		
+|
+irun: *W,DLCPTH (/tools/cadence/FOUNDRY/cds.lib,15): cds.lib Permission denied '/tools/cadence/FOUNDRY/analog/45nm/gpdk045' (cds.lib command ignored).
+DEFINE rfLib_new	/home/install/FOUNDRY/rfLib_new
+|
+irun: *W,DLCPTH (/tools/cadence/FOUNDRY/cds.lib,19): cds.lib Invalid path '/home/install/FOUNDRY/rfLib_new' (cds.lib command ignored).
+DEFINE gpdk045		$ANALOG/45nm/gpdk045		
+|
+irun: *W,DLCPTH (/tools/cadence/FOUNDRY/cds.lib,15): cds.lib Permission denied '/tools/cadence/FOUNDRY/analog/45nm/gpdk045' (cds.lib command ignored).
+DEFINE rfLib_new	/home/install/FOUNDRY/rfLib_new
+|
+irun: *W,DLCPTH (/tools/cadence/FOUNDRY/cds.lib,19): cds.lib Invalid path '/home/install/FOUNDRY/rfLib_new' (cds.lib command ignored).
+DEFINE gpdk045		$ANALOG/45nm/gpdk045		
+|
+irun: *W,DLCPTH (/tools/cadence/FOUNDRY/cds.lib,15): cds.lib Permission denied '/tools/cadence/FOUNDRY/analog/45nm/gpdk045' (cds.lib command ignored).
+DEFINE rfLib_new	/home/install/FOUNDRY/rfLib_new
+|
+irun: *W,DLCPTH (/tools/cadence/FOUNDRY/cds.lib,19): cds.lib Invalid path '/home/install/FOUNDRY/rfLib_new' (cds.lib command ignored).
+DEFINE gpdk045		$ANALOG/45nm/gpdk045		
+|
+ncvlog: *W,DLCPTH (/tools/cadence/FOUNDRY/cds.lib,15): cds.lib Permission denied '/tools/cadence/FOUNDRY/analog/45nm/gpdk045' (cds.lib command ignored).
+DEFINE rfLib_new	/home/install/FOUNDRY/rfLib_new
+|
+ncvlog: *W,DLCPTH (/tools/cadence/FOUNDRY/cds.lib,19): cds.lib Invalid path '/home/install/FOUNDRY/rfLib_new' (cds.lib command ignored).
+file: hazard_unit.v
+	module worklib.hazard_unit:v
+		errors: 0, warnings: 0
+	Total errors/warnings found outside modules and primitives:
+		errors: 0, warnings: 2
+DEFINE gpdk045		$ANALOG/45nm/gpdk045		
+|
+irun: *W,DLCPTH (/tools/cadence/FOUNDRY/cds.lib,15): cds.lib Permission denied '/tools/cadence/FOUNDRY/analog/45nm/gpdk045' (cds.lib command ignored).
+DEFINE rfLib_new	/home/install/FOUNDRY/rfLib_new
+|
+irun: *W,DLCPTH (/tools/cadence/FOUNDRY/cds.lib,19): cds.lib Invalid path '/home/install/FOUNDRY/rfLib_new' (cds.lib command ignored).
+DEFINE gpdk045		$ANALOG/45nm/gpdk045		
+|
+irun: *W,DLCPTH (/tools/cadence/FOUNDRY/cds.lib,15): cds.lib Permission denied '/tools/cadence/FOUNDRY/analog/45nm/gpdk045' (cds.lib command ignored).
+DEFINE rfLib_new	/home/install/FOUNDRY/rfLib_new
+|
+irun: *W,DLCPTH (/tools/cadence/FOUNDRY/cds.lib,19): cds.lib Invalid path '/home/install/FOUNDRY/rfLib_new' (cds.lib command ignored).
+DEFINE gpdk045		$ANALOG/45nm/gpdk045		
+|
+ncelab: *W,DLCPTH (/tools/cadence/FOUNDRY/cds.lib,15): cds.lib Permission denied '/tools/cadence/FOUNDRY/analog/45nm/gpdk045' (cds.lib command ignored).
+DEFINE rfLib_new	/home/install/FOUNDRY/rfLib_new
+|
+ncelab: *W,DLCPTH (/tools/cadence/FOUNDRY/cds.lib,19): cds.lib Invalid path '/home/install/FOUNDRY/rfLib_new' (cds.lib command ignored).
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Top level design units:
+		main_tb
+		lru_next
+		lru_reg
+        .mem_store_type_ex(mem_store_type_ex),
+                                           |
+ncelab: *W,CUVMPW (./top.v,395|43): port sizes differ in port connection (2/3).
+        .mem_store_type_ex_out(mem_store_type_ex_out),
+                                                   |
+ncelab: *W,CUVMPW (./top.v,413|51): port sizes differ in port connection (2/3).
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+DEFINE gpdk045		$ANALOG/45nm/gpdk045		
+|
+ncvlog_cg: *W,DLCPTH (/tools/cadence/FOUNDRY/cds.lib,15): cds.lib Permission denied '/tools/cadence/FOUNDRY/analog/45nm/gpdk045' (cds.lib command ignored).
+DEFINE rfLib_new	/home/install/FOUNDRY/rfLib_new
+|
+ncvlog_cg: *W,DLCPTH (/tools/cadence/FOUNDRY/cds.lib,19): cds.lib Invalid path '/home/install/FOUNDRY/rfLib_new' (cds.lib command ignored).
+		worklib.alu_top32:v <0x053ce7b6>
+			streams:   1, words:   391
+		worklib.arithmetic_unit32:v <0x5b335257>
+			streams:   3, words:  3237
+		worklib.branch_jump_unit:v <0x258bc841>
+			streams:   8, words:  1980
+		worklib.btb:v <0x0c0d06bc>
+			streams:   5, words:  1810
+		worklib.btb_file:v <0x7eb90f17>
+			streams:  14, words:  7606
+		worklib.btb_read:v <0x2ba1931f>
+			streams:   3, words:   642
+		worklib.btb_write:v <0x459666bc>
+			streams:   4, words:  5654
+		worklib.compare_unit32:v <0x0d218a0a>
+			streams:   1, words:   539
+		worklib.control_unit:v <0x1261abf0>
+			streams:   1, words:  6074
+		worklib.data_memory:v <0x738db73e>
+			streams:   7, words:  4765
+		worklib.decode_unit:v <0x6b70779b>
+			streams:   3, words:  2665
+		worklib.dynamic_branch_predictor:v <0x5e57925f>
+			streams:   1, words:   611
+		worklib.ex_mem_reg:v <0x36857332>
+			streams:   5, words:  5850
+		worklib.execute_stage:v <0x280ed75e>
+			streams:   8, words:  2472
+		worklib.forwarding_unit:v <0x2180917e>
+			streams:   1, words:  1237
+		worklib.hazard_unit:v <0x600c15ef>
+			streams:   3, words:  2880
+		worklib.id_ex_reg:v <0x569447ba>
+			streams:   5, words: 16401
+		worklib.if_id_reg:v <0x7f44c922>
+			streams:   5, words:  2915
+		worklib.if_stage_simple_btb:v <0x00e2c637>
+			streams:   4, words:  1071
+		worklib.inst_mem:v <0x0a9fd3d1>
+			streams:   3, words:  1287
+		worklib.load_datapath:v <0x14b496c3>
+			streams:   6, words:  2617
+		worklib.logical_unit32:v <0x54ae6fac>
+			streams:   1, words:   420
+		worklib.lru_next:v <0x1308aded>
+			streams:   0, words:     0
+		worklib.lru_reg:v <0x4c375b6b>
+			streams:   2, words:   455
+		worklib.main_tb:v <0x0a808dac>
+			streams:   5, words:  2535
+		worklib.mem_stage:v <0x1f0dc307>
+			streams:   5, words:   567
+		worklib.mem_wb:v <0x1aef1628>
+			streams:   6, words:  6430
+		worklib.pc_reg:v <0x01b03d41>
+			streams:   2, words:   561
+		worklib.register_file:v <0x27db5166>
+			streams:   7, words:  2434
+		worklib.rv32i_core:v <0x4932a45d>
+			streams:   9, words:  1789
+		worklib.shift_unit32:v <0x25109793>
+			streams:   2, words:   768
+		worklib.store_datapath:v <0x407ec06f>
+			streams:   1, words:  1795
+		worklib.top_decode:v <0x4c79a89f>
+			streams:  10, words:  1199
+		worklib.wb_stage:v <0x187e5cd5>
+			streams:   3, words:   492
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		               Instances  Unique
+		Modules:              36      35
+		Resolved nets:         1       1
+		Registers:           118     117
+		Scalar wires:        136       -
+		Expanded wires:        5       2
+		Vectored wires:      127       -
+		Always blocks:        30      29
+		Initial blocks:        6       6
+		Cont. assignments:    73     142
+		Pseudo assignments:    8       8
+	Writing initial simulation snapshot: worklib.main_tb:v
+DEFINE gpdk045		$ANALOG/45nm/gpdk045		
+|
+ncsim: *W,DLCPTH (/tools/cadence/FOUNDRY/cds.lib,15): cds.lib Permission denied '/tools/cadence/FOUNDRY/analog/45nm/gpdk045' (cds.lib command ignored).
+DEFINE rfLib_new	/home/install/FOUNDRY/rfLib_new
+|
+ncsim: *W,DLCPTH (/tools/cadence/FOUNDRY/cds.lib,19): cds.lib Invalid path '/home/install/FOUNDRY/rfLib_new' (cds.lib command ignored).
+Loading snapshot worklib.main_tb:v .................... Done
+ncsim> source /tools/cadence/INCISIVE152/tools/inca/files/ncsimrc
+ncsim> run
+SIMULATION DONE
+Simulation complete via $finish(1) at time 1020 NS + 0
+./tb_top.v:34         $finish;
+ncsim> exit
+TOOL:	irun(64)	15.20-s051: Exiting on Feb 11, 2019 at 01:30:23 IST  (total: 00:00:00)

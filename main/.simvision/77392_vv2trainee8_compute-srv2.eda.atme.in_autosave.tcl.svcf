@@ -1,0 +1,163 @@
+
+#
+# Preferences
+#
+preferences set toolbar-Standard-WatchWindow {
+  usual
+  shown 0
+}
+preferences set plugin-enable-svdatabrowser-new 1
+preferences set toolbar-Windows-WatchWindow {
+  usual
+  shown 0
+}
+preferences set toolbar-Standard-Console {
+  usual
+  position -pos 1
+}
+preferences set toolbar-Search-Console {
+  usual
+  position -pos 2
+}
+preferences set toolbar-Standard-WaveWindow {
+  usual
+  position -pos 1
+}
+preferences set plugin-enable-groupscope 0
+preferences set plugin-enable-interleaveandcompare 0
+preferences set plugin-enable-waveformfrequencyplot 0
+preferences set toolbar-SimControl-WatchWindow {
+  usual
+  shown 0
+}
+preferences set savedlg-simulator ppe
+preferences set whats-new-dont-show-at-startup 1
+preferences set toolbar-TimeSearch-WatchWindow {
+  usual
+  shown 0
+}
+
+#
+# Databases
+#
+database require wave -search {
+	./wave.shm/wave.trn
+	/home/vv2trainee8/Desktop/Sourabh/main/wave.shm/wave.trn
+}
+
+#
+# Markers
+#
+set time 70ns
+if {[catch {marker new -name  {Branch 1} -time $time}] != ""} {
+    marker set -using {Branch 1} -time $time
+}
+set time 310ns
+if {[catch {marker new -name  b3 -time $time}] != ""} {
+    marker set -using b3 -time $time
+}
+set time 280ns
+if {[catch {marker new -name  b2 -time $time}] != ""} {
+    marker set -using b2 -time $time
+}
+set time 250ns
+if {[catch {marker new -name  b1 -time $time}] != ""} {
+    marker set -using b1 -time $time
+}
+set time 170ns
+if {[catch {marker new -name  branch3 -time $time}] != ""} {
+    marker set -using branch3 -time $time
+}
+set time 120ns
+if {[catch {marker new -name  {Branch 3} -time $time}] != ""} {
+    marker set -using {Branch 3} -time $time
+}
+
+#
+# Mnemonic Maps
+#
+mmap new -reuse -name {Boolean as Logic} -radix %b -contents {{%c=FALSE -edgepriority 1 -shape low}
+{%c=TRUE -edgepriority 1 -shape high}}
+mmap new -reuse -name {Example Map} -radix %x -contents {{%b=11???? -bgcolor orange -label REG:%x -linecolor yellow -shape bus}
+{%x=1F -bgcolor red -label ERROR -linecolor white -shape EVENT}
+{%x=2C -bgcolor red -label ERROR -linecolor white -shape EVENT}
+{%x=* -label %x -linecolor gray -shape bus}}
+
+#
+# Waveform windows
+#
+if {[catch {window new WaveWindow -name "Waveform 1" -geometry 1366x665+-1+27}] != ""} {
+    window geometry "Waveform 1" 1366x665+-1+27
+}
+window target "Waveform 1" on
+waveform using {Waveform 1}
+waveform sidebar select designbrowser
+waveform set \
+    -primarycursor TimeA \
+    -signalnames name \
+    -signalwidth 175 \
+    -units ns \
+    -valuewidth 75
+waveform baseline set -time 0
+
+set id [waveform add -signals  {
+	wave::main_tb.clk
+	} ]
+set id [waveform add -signals  {
+	wave::main_tb.rst
+	} ]
+set id [waveform add -signals  {
+	{wave::main_tb.dut.u_if.u_pc_reg.pc[31:0]}
+	} ]
+set id [waveform add -signals  {
+	{wave::main_tb.dut.u_if.u_pc_reg.next_pc[31:0]}
+	} ]
+set id [waveform add -signals  {
+	{wave::main_tb.dut.u_if.u_imem.instruction[31:0]}
+	} ]
+set id [waveform add -signals  {
+	{wave::main_tb.dut.u_decode.instruction_in[31:0]}
+	} ]
+set id [waveform add -signals  {
+	wave::main_tb.dut.u_decode.branch
+	} ]
+set id [waveform add -signals  {
+	wave::main_tb.dut.u_if.u_btb.hit0
+	} ]
+set id [waveform add -signals  {
+	wave::main_tb.dut.u_if.u_btb.hit1
+	} ]
+set id [waveform add -signals  {
+	wave::main_tb.dut.u_if.u_btb.predict_taken
+	} ]
+set id [waveform add -signals  {
+	wave::main_tb.dut.u_if.u_btb.actual_taken
+	} ]
+set id [waveform add -signals  {
+	wave::main_tb.dut.u_if.btb_valid
+	} ]
+set id [waveform add -signals  {
+	{wave::main_tb.dut.u_if.u_btb.predict_target[31:0]}
+	} ]
+set id [waveform add -signals  {
+	{wave::main_tb.dut.u_id_ex.instr_ex[31:0]}
+	} ]
+set id [waveform add -signals  {
+	wave::main_tb.dut.u_id_ex.branch_ex
+	} ]
+
+waveform xview limits 29ns 93ns
+
+#
+# Waveform Window Links
+#
+
+#
+# Console windows
+#
+console set -windowname Console
+window geometry Console 600x250+0+0
+
+#
+# Layout selection
+#

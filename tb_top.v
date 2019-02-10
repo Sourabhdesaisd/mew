@@ -4,10 +4,6 @@ module main_tb;
     // Clock / reset
     reg clk;
     reg rst;
-
-    // Simulation time (ns) - adjust as needed
-    localparam integer SIM_TIME_NS = 200000;
-
     // ---------------------------------------------------------
     // Instantiate DUT (change module name if your top uses a different name)
     // ---------------------------------------------------------

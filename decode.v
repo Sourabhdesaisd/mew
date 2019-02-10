@@ -117,8 +117,8 @@ module hazard_unit (
 
         // Highest priority: Control hazard resolved in EX (mispredict or taken branch/jump)
         if (modify_pc_ex) begin
-            pc_en       = 1'b1;   // allow PC to take corrected value (IF-stage pc_update handles override)
-            if_id_en    = 1'b1;
+            pc_en       = 1'b0;   // allow PC to take corrected value (IF-stage pc_update handles override)
+            if_id_en    = 1'b0;
             if_id_flush = 1'b1;   // kill wrong-path instruction in IF/ID
             id_ex_flush = 1'b1;   // kill wrong-path instruction in ID/EX
         end

@@ -1,5 +1,5 @@
 irun(64): 15.20-s051: (c) Copyright 1995-2018 Cadence Design Systems, Inc.
-TOOL:	irun(64)	15.20-s051: Started on Feb 13, 2019 at 03:43:11 IST
+TOOL:	irun(64)	15.20-s051: Started on Feb 10, 2019 at 00:43:03 IST
 irun
 	-access +rwc
 	-f compile.f
@@ -38,9 +38,9 @@ irun: *W,DLCPTH (/tools/cadence/FOUNDRY/cds.lib,15): cds.lib Permission denied '
 DEFINE rfLib_new	/home/install/FOUNDRY/rfLib_new
 |
 irun: *W,DLCPTH (/tools/cadence/FOUNDRY/cds.lib,19): cds.lib Invalid path '/home/install/FOUNDRY/rfLib_new' (cds.lib command ignored).
-Recompiling... reason: file './execute.v' is newer than expected.
-	expected: Wed Feb 13 03:42:10 2019
-	actual:   Wed Feb 13 03:43:08 2019
+Recompiling... reason: file './fetch.v' is newer than expected.
+	expected: Sun Feb 10 00:32:50 2019
+	actual:   Sun Feb 10 00:42:54 2019
 DEFINE gpdk045		$ANALOG/45nm/gpdk045		
 |
 irun: *W,DLCPTH (/tools/cadence/FOUNDRY/cds.lib,15): cds.lib Permission denied '/tools/cadence/FOUNDRY/analog/45nm/gpdk045' (cds.lib command ignored).
@@ -53,23 +53,16 @@ ncvlog: *W,DLCPTH (/tools/cadence/FOUNDRY/cds.lib,15): cds.lib Permission denied
 DEFINE rfLib_new	/home/install/FOUNDRY/rfLib_new
 |
 ncvlog: *W,DLCPTH (/tools/cadence/FOUNDRY/cds.lib,19): cds.lib Invalid path '/home/install/FOUNDRY/rfLib_new' (cds.lib command ignored).
-file: execute.v
-	module worklib.branch_jump_unit:v
+file: fetch.v
+	module worklib.btb_read:v
 		errors: 0, warnings: 0
-	module worklib.alu_top32:v
+	module worklib.btb:v
 		errors: 0, warnings: 0
-	module worklib.logical_unit32:v
-		errors: 0, warnings: 0
-	module worklib.shift_unit32:v
-		errors: 0, warnings: 0
-	module worklib.arithmetic_unit32:v
-		errors: 0, warnings: 0
-	module worklib.compare_unit32:v
-		errors: 0, warnings: 0
-	module worklib.forwarding_unit:v
-		errors: 0, warnings: 0
+/*
+ |
+ncvlog: *W,NOCMIC (fetch.v,718|1): error-prone block comment nested within block comment [2.3(IEEE)].
 	Total errors/warnings found outside modules and primitives:
-		errors: 0, warnings: 2
+		errors: 0, warnings: 3
 DEFINE gpdk045		$ANALOG/45nm/gpdk045		
 |
 irun: *W,DLCPTH (/tools/cadence/FOUNDRY/cds.lib,15): cds.lib Permission denied '/tools/cadence/FOUNDRY/analog/45nm/gpdk045' (cds.lib command ignored).
@@ -90,6 +83,7 @@ DEFINE rfLib_new	/home/install/FOUNDRY/rfLib_new
 ncelab: *W,DLCPTH (/tools/cadence/FOUNDRY/cds.lib,19): cds.lib Invalid path '/home/install/FOUNDRY/rfLib_new' (cds.lib command ignored).
 		Caching library 'worklib' ....... Done
 	Elaborating the design hierarchy:
+		Caching library 'worklib' ....... Done
 	Top level design units:
 		pc
 		main_tb
@@ -107,34 +101,24 @@ ncvlog_cg: *W,DLCPTH (/tools/cadence/FOUNDRY/cds.lib,15): cds.lib Permission den
 DEFINE rfLib_new	/home/install/FOUNDRY/rfLib_new
 |
 ncvlog_cg: *W,DLCPTH (/tools/cadence/FOUNDRY/cds.lib,19): cds.lib Invalid path '/home/install/FOUNDRY/rfLib_new' (cds.lib command ignored).
-		worklib.alu_top32:v <0x053ce7b6>
-			streams:   1, words:   391
-		worklib.arithmetic_unit32:v <0x5b335257>
-			streams:   3, words:  3237
-		worklib.branch_jump_unit:v <0x258bc841>
-			streams:   8, words:  1980
-		worklib.compare_unit32:v <0x0d218a0a>
-			streams:   1, words:   539
-		worklib.forwarding_unit:v <0x2180917e>
-			streams:   1, words:  1237
-		worklib.logical_unit32:v <0x54ae6fac>
-			streams:   1, words:   420
-		worklib.shift_unit32:v <0x25109793>
-			streams:   2, words:   768
+		worklib.btb:v <0x29e69c6e>
+			streams:   2, words:   459
+		worklib.btb_read:v <0x56d4760a>
+			streams:   8, words:  2278
 	Building instance specific data structures.
 	Loading native compiled code:     .................... Done
 	Design hierarchy summary:
 		               Instances  Unique
 		Modules:              37      36
 		Resolved nets:         1       1
-		Registers:           108     107
-		Scalar wires:        130       -
+		Registers:           105     104
+		Scalar wires:        123       -
 		Expanded wires:        5       2
-		Vectored wires:      156       -
-		Always blocks:        30      29
+		Vectored wires:      152       -
+		Always blocks:        29      28
 		Initial blocks:        6       6
-		Cont. assignments:    85     174
-		Pseudo assignments:   12      12
+		Cont. assignments:    81     166
+		Pseudo assignments:   10      10
 	Writing initial simulation snapshot: worklib.pc:v
 DEFINE gpdk045		$ANALOG/45nm/gpdk045		
 |
@@ -147,6 +131,6 @@ ncsim> source /tools/cadence/INCISIVE152/tools/inca/files/ncsimrc
 ncsim> run
 SIMULATION DONE
 Simulation complete via $finish(1) at time 1020 NS + 0
-./tb_top.v:78         $finish;
+./tb_top.v:74         $finish;
 ncsim> exit
-TOOL:	irun(64)	15.20-s051: Exiting on Feb 13, 2019 at 03:43:11 IST  (total: 00:00:00)
+TOOL:	irun(64)	15.20-s051: Exiting on Feb 10, 2019 at 00:43:03 IST  (total: 00:00:00)
