@@ -1,0 +1,11 @@
+decode.v 
+execute.v
+ex_mem_pipe.v 
+fetch.v 
+id_ex_pipe.v  
+if_id_pipe.v 
+memory.v  
+mem_wb_pipe.v  
+top.v  
+wb.v
+tb_top.v
